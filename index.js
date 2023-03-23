@@ -18,10 +18,10 @@ app.use('/api/recipe',require('./Routes/Recipe.js'))
 
 //serving the indexfile
 
-  app.use(express.static(path.join(__dirname,'./Frontend/build')))
-  app.get('/',(req,res)=>{
+  app.use(express.static(path.join(__dirname,"./frontend/build")))
+  app.get('*',(_,res)=>{
 
-    res.sendFile(path.join(__dirname,"./Frontend/build/index.html"))
+    res.sendFile(path.join(__dirname,"./frontend/build/index.html"))
   })
 
 
